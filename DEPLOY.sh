@@ -71,5 +71,6 @@ then
      echo "bosh deploy error"
      bosh task
      bosh task --debug
+     bosh delete deployment cf
      exit 247;
 fi
