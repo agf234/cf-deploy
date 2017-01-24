@@ -3,7 +3,7 @@
 # Author:  Andres Lucas Garcia Fiorini
 # Date: 01/24/2017
 # Altoros S.A.(Argentina)
-set -x
+#set -x
 /bin/ls -ltr
 echo "##############################"
 #export
@@ -17,7 +17,7 @@ then
      exit 249;
 fi
 
-bosh deployment cf-manifest/minimal-aws-salida.yml
+bosh deployment minimal-aws-salida.yml
 if [ $? != 0 ];
 then
      echo "##############################"
