@@ -7,6 +7,8 @@ set -x
 /bin/ls -ltr
 echo "##############################"
 export
+rvm
+rvm list
 echo "##############################"
 
 bosh target $BOSH_TARGET
