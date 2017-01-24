@@ -18,8 +18,7 @@ then
      echo "bosh target error"
      exit 249;
 fi
-     bosh tasks
-     exit 0
+     
 set -x
 bosh deployment cf-manifest-rsrc/minimal-aws-salida.yml
 if [ $? != 0 ];
