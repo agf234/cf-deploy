@@ -70,6 +70,7 @@ then
      echo "##############################"
      echo "bosh deploy error"
      bosh task
+     bosh tasks
      bosh task --debug
      bosh cck cf  --auto
      #yes yes | bosh delete deployment cf
