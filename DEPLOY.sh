@@ -28,18 +28,40 @@ then
 fi
 bosh upload stemcell --skip-if-exists https://s3.amazonaws.com/bosh-aws-light-stemcells/light-bosh-stemcell-3312.15-aws-xen-hvm-ubuntu-trusty-go_agent.tgz
 
-bosh create release
-if [ $? != 0 ];
-then
-     echo "##############################"
-     echo "bosh create release error"
-     exit 247;
-fi
-bosh upload release --skip-if-exists
+bosh upload release https://bosh.io/d/github.com/cloudfoundry/cf-release
 if [ $? != 0 ];
 then
      echo "##############################"
      echo "bosh upload release error"
-     exit 246;     
+     exit 247;
 fi
+bosh upload release https://bosh.io/d/github.com/cloudfoundry/diego-release
+if [ $? != 0 ];
+then
+     echo "##############################"
+     echo "bosh upload release error"
+     exit 247;
+fi
+bosh upload release https://bosh.io/d/github.com/cloudfoundry/cflinuxfs2-rootfs-release
+if [ $? != 0 ];
+then
+     echo "##############################"
+     echo "bosh upload release error"
+     exit 247;
+fi
+bosh upload release https://bosh.io/d/github.com/cloudfoundry/garden-runc-release
+if [ $? != 0 ];
+then
+     echo "##############################"
+     echo "bosh upload release error"
+     exit 247;
+fi
+bosh upload release https://bosh.io/d/github.com/cloudfoundry-incubator/etcd-release
+if [ $? != 0 ];
+then
+     echo "##############################"
+     echo "bosh upload release error"
+     exit 247;
+fi
+
 bosh deploy
