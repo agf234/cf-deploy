@@ -28,7 +28,7 @@ then
 fi
 bosh upload stemcell --skip-if-exists https://s3.amazonaws.com/bosh-aws-light-stemcells/light-bosh-stemcell-3312.15-aws-xen-hvm-ubuntu-trusty-go_agent.tgz
 
-bosh create release --skip-if-exists 
+bosh create release
 if [ $? != 0 ];
 then
      echo "##############################"
@@ -42,4 +42,4 @@ then
      echo "bosh upload release error"
      exit 246;     
 fi
-# bosh deploy
+bosh deploy
