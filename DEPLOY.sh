@@ -5,6 +5,9 @@
 # Altoros S.A.(Argentina)
 set -x
 /bin/ls -ltr
+echo "##############################"
+export
+echo "##############################"
 
 bosh target $BOSH_TARGET
 bosh deployment cf-manifest/minimal-aws-salida.yml
