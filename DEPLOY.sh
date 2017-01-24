@@ -3,7 +3,7 @@
 # Author:  Andres Lucas Garcia Fiorini
 # Date: 01/24/2017
 # Altoros S.A.(Argentina)
-
+set -x
 /bin/ls -ltr
 
 bosh target $BOSH_TARGET
