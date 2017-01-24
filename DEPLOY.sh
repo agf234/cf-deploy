@@ -26,7 +26,7 @@ then
      echo "bosh deployment error"
      exit 248;
 fi
-bosh upload stemcell https://s3.amazonaws.com/bosh-aws-light-stemcells/light-bosh-stemcell-3312.15-aws-xen-hvm-ubuntu-trusty-go_agent.tgz
+bosh upload stemcell --skip-if-exists https://s3.amazonaws.com/bosh-aws-light-stemcells/light-bosh-stemcell-3312.15-aws-xen-hvm-ubuntu-trusty-go_agent.tgz
 
 bosh create release
 if [ $? != 0 ];
