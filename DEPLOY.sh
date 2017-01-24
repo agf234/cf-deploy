@@ -5,6 +5,8 @@
 # Altoros S.A.(Argentina)
 #set -x
 /bin/ls -ltr
+/bin/ls -ltr cf-manifest
+/bin/ls -ltr cf-manifest-rsrc
 echo "##############################"
 #export
 echo "##############################"
