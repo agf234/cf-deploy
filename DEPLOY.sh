@@ -6,9 +6,7 @@
 set -x
 /bin/ls -ltr
 echo "##############################"
-export
-rvm
-rvm list
+#export
 echo "##############################"
 
 yes admin | bosh target $BOSH_TARGET
