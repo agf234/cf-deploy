@@ -69,5 +69,7 @@ if [ $? != 0 ];
 then
      echo "##############################"
      echo "bosh deploy error"
+     bosh task
+     bosh task --debug
      exit 247;
 fi
