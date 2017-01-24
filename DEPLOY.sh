@@ -19,7 +19,7 @@ then
      exit 249;
 fi
 
-bosh deployment minimal-aws-salida.yml
+bosh deployment cf-manifest-rsrc/minimal-aws-salida.yml
 if [ $? != 0 ];
 then
      echo "##############################"
