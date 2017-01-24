@@ -5,6 +5,7 @@
 # Altoros S.A.(Argentina)
 
 /bin/ls -ltr
+bosh status
 BOSH_W=`/usr/bin/whereis bosh`
 
 $BOSH_W deployment cf-manifest/minimal-aws-salida.yml
