@@ -64,4 +64,10 @@ then
      exit 247;
 fi
 
-bosh deploy
+yes yes | bosh deploy
+if [ $? != 0 ];
+then
+     echo "##############################"
+     echo "bosh deploy error"
+     exit 247;
+fi
