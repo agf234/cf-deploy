@@ -8,7 +8,7 @@
 /bin/ls -ltr cf-manifest
 /bin/ls -ltr cf-manifest-rsrc
 echo "##############################"
-#export
+#export 
 echo "##############################"
 
 yes admin | bosh target $BOSH_TARGET
